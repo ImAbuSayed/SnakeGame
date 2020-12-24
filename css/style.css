@@ -6,10 +6,13 @@
 }
 #div1{
     /* align-items: center; */
+    width: 500px;
+    height: 200px;
+    margin: auto;
 }
 #score{
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 #start{
     /* transform: scale(1,1); */
@@ -27,5 +30,5 @@ justify-content: center;
 }
 #div2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr;
 }
