@@ -68,10 +68,17 @@ function newGame(){
 }
 
 function pauseGame(){
+    if(pause == false){
+        pause=true;
+    }
+    else{
+        pause=false;
+    }
 
 }
 
 function directSnake(e){
+    
     //clear interval
     clearInterval(snakeMove);
     //snake should only move forward direction, not backward 
@@ -170,6 +177,7 @@ function collisionCheck(){
             return true;
         }
     }
+    return false;
 }
 
 //arrow button funtions
