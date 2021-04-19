@@ -28,17 +28,17 @@ if(pause == false){
 
 function newGame(){
     scoreValue=0;
-
+    score.innerText=("Score: ");
     if(startState == false){
         start.innerText ='New Game';
         startState=true;
     }
-    else{
+    
         //clear everything
+        clearInterval(snakeMove);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        pauseState = false;
-        document.addEventListener('keydown',directSnake);
-    }
+        
+    
     
     //clear snake
     snake = [];
@@ -52,6 +52,9 @@ function newGame(){
     drawSnake();
     //draw apple
     drawApple();
+
+    pauseState = false;
+    document.addEventListener('keydown',directSnake);
 }
 
 function pauseGame(){
@@ -110,6 +113,10 @@ function moveSnake(){
                   break;
     }
 
+    if(collisionCheck()){
+        return;
+    }
+
     let head = {
         x: X,
         y: Y
@@ -133,4 +140,12 @@ function moveSnake(){
 }
 function clearOldHead(oldHead){
     ctx.clearRect(oldHead.x, oldHead.y,size,size);
+}
+function collisionCheck(){
+    //Wall collishion
+    if(X<0 || X> (canvas.width - 10) || Y<0 || Y > (canvas.height -10)){
+        alert("Game Over");
+        newGame();
+        return true;
+    }
 }
