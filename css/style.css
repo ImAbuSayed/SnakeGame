@@ -1,6 +1,26 @@
+#buttLeft{
+    margin-right: 50px;
+    width: 90px;
+    height: inherit;
+}
+#buttRight{
+    margin-left: 50px;
+    width: 90px;
+    height: inherit;
+}
+#buttUp{
+    
+    width: 90px;
+    height: inherit;
+}
+#buttDown{
+    
+    width: 90px;
+    height: inherit;
+}
 #arrowsbg{
     background-color: dimgray;
-    width: 180px;
+    width: 370px;
     border: 4px solid;
 }
 
