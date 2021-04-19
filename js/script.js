@@ -7,6 +7,11 @@ let start = document.getElementById("start");
 let pause = document.getElementById("pause");
 let score = document.getElementById("score");
 
+let up= document.getElementById("buttUp");
+let dw= document.getElementById("buttDown");
+let lf= document.getElementById("buttLeft");
+let rt= document.getElementById("buttRight");
+
 let snake = [];
 let size = 10;
 let key = "";
@@ -21,6 +26,11 @@ const borderConst=10;
 
 start.addEventListener('click',newGame);
 pause.addEventListener('click',pauseGame);
+up.addEventListener('click',upBf);
+dw.addEventListener('click',dwBf);
+lf.addEventListener('click',lfBf);
+rt.addEventListener('click',rtBf);
+
 
 if(pause == false){
     document.addEventListener('keydown',directSnake);
@@ -28,7 +38,7 @@ if(pause == false){
 
 function newGame(){
     scoreValue=0;
-    score.innerText=("Score: 0");
+    score.innerText=("Score:  ");
     if(startState == false){
         start.innerText ='New Game';
         startState=true;
@@ -88,6 +98,7 @@ function drawSnake(){
         ctx.fillRect(snake[i].x,snake[i].y,size,size);
     }
 }
+
 function drawApple(){
     apple={
         x: Math.round(Math.random() * (parseInt(canvasBorder.width) - borderConst)/10) * 10,
@@ -97,6 +108,7 @@ function drawApple(){
     ctx.fillRect(apple.x,apple.y,size,size);
 
 }
+
 function moveSnake(){
     // get the current head values
     X = snake[0].x;
@@ -138,9 +150,11 @@ function moveSnake(){
         drawSnake();
     }
 }
+
 function clearOldHead(oldHead){
     ctx.clearRect(oldHead.x, oldHead.y,size,size);
 }
+
 function collisionCheck(){
     //Wall collishion
     if(X<0 || X> (canvas.width - 10) || Y<0 || Y > (canvas.height -10)){
@@ -156,4 +170,33 @@ function collisionCheck(){
             return true;
         }
     }
+}
+
+//arrow button funtions
+function upBf(){
+    key = "U";
+
+    //moveSnake(key);
+    directSnake(key);
+}
+
+function dwBf(){
+    key = "D";
+
+    //moveSnake(key);
+    directSnake(key);
+}
+
+function lfBf(){
+    key = "L";
+
+    //moveSnake(key);
+    directSnake(key);
+}
+
+function rtBf(){
+    key = "R";
+
+    //moveSnake(key);
+    directSnake(key);
 }
