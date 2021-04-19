@@ -1,0 +1,128 @@
+@media only screen and (max-width: 600px)
+{
+    #canvas1{
+        width: 82%;
+        border: 12px solid rgb(187, 206, 103);
+        display: block;
+        margin: 0px auto;
+        background-color: black;
+      }
+
+    #div1{
+        width: 82%;
+        margin: auto;
+      }
+    
+    #score{
+        width: 82%;
+        display: flex;
+        justify-content: center;
+      }
+
+    #start{
+        width: auto;
+        margin: auto;
+        block-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    
+    #pause{
+        width:  auto;
+        margin: auto;
+        block-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+    #div2{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+      }
+    
+}
+
+@media only screen and (min-width: 600px){
+    #canvas1{
+        width: 82%;
+        border: 12px solid rgb(207, 194, 69);
+        display: block;
+        margin: 0px auto;
+        background-color: black;
+      }
+
+    #div1{
+        width: 82%;
+        margin: auto;
+      }
+    
+    #score{
+        width: 82%;
+        display: flex;
+        justify-content: center;
+      }
+
+    #start{
+        width: auto;
+        margin: auto;
+        block-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    
+    #pause{
+        width:  auto;
+        margin: auto;
+        block-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+    #div2{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+      }
+}
+
+@media only screen and (min-width: 992px){
+    #canvas1{
+        background-color: black;
+        border: 12px solid rgb(45, 195, 206);
+        display: block;
+        margin: 0px auto;
+        width: auto;
+    }
+    #div1{
+        /* align-items: center; */
+        width: 500px;
+        height: 200px;
+        margin: auto;
+    }
+    #score{
+        display: flex;
+        justify-content: center;
+    }
+    #start{
+        /* transform: scale(1,1); */
+        margin: auto;
+        block-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+        /* float: left; */
+    }
+    #pause{
+        /* transform: scale(1,1); */
+        margin: auto;
+        block-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+        /* float: right; */
+    }
+    #div2{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        justify-content: center;
+    }
+}
