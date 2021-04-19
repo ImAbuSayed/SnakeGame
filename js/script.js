@@ -28,7 +28,7 @@ if(pause == false){
 
 function newGame(){
     scoreValue=0;
-    score.innerText=("Score: ");
+    score.innerText=("Score: 0");
     if(startState == false){
         start.innerText ='New Game';
         startState=true;
@@ -144,8 +144,16 @@ function clearOldHead(oldHead){
 function collisionCheck(){
     //Wall collishion
     if(X<0 || X> (canvas.width - 10) || Y<0 || Y > (canvas.height -10)){
-        alert("Game Over");
+        alert('Game Over!' + '\nYour Score: ' + scoreValue);
         newGame();
         return true;
+    }
+    //body collision
+    for(let i=0; i<snake.length; i++){
+        if(X == snake[i].x && Y == snake[i].y){
+            alert('Game Over!' + '\nYour Score: ' + scoreValue);
+            newGame();
+            return true;
+        }
     }
 }
