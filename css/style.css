@@ -1,22 +1,28 @@
+body{
+    background-color: rgb(96, 146, 146);
+}
+#note{
+    font-size: smaller;
+}
 #buttLeft{
     margin-right: 50px;
     width: 90px;
-    height: inherit;
+    height: 60px;
 }
 #buttRight{
     margin-left: 50px;
     width: 90px;
-    height: inherit;
+    height: 60px;
 }
 #buttUp{
     
     width: 90px;
-    height: inherit;
+    height: 60px;
 }
 #buttDown{
     
     width: 90px;
-    height: inherit;
+    height: 60px;
 }
 #arrowsbg{
     background-color: dimgray;
@@ -43,6 +49,7 @@
     justify-content: center;
     border: 2px solid;
     width: 250px;
+    font-size: medium;
 }
 
 #start{
